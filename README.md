@@ -10,5 +10,5 @@ Quick start
 * Install [Gradle](http://gradle.org)
 * Run 'gradle jettyRun'
 * Open the URL http://localhost:8080/timetracker in your browser
-* Login in using username admin with the default password admin
+* Login using username admin with the default password admin
 
