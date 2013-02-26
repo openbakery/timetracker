@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="menu.TimeSheet">Time Sheet</entry>
+	<entry key="menu.Customers">Kunden</entry>
+	<entry key="menu.Projects">Projekte</entry>
+	<entry key="menu.Users">Benutzer</entry>
+    <entry key="menu.Report">Report</entry>
+	<entry key="menu.Logout">Abmelden (${user.name})</entry>
+	<entry key="save">Speichern</entry>
+	<entry key="delete">Löschen</entry>
+	<entry key="update">Ändern</entry>
+	<entry key="begin">Start</entry>
+	<entry key="end">Ende</entry>
+    <entry key="duration">Dauer</entry>
+	<entry key="project">Projekt</entry>
+	<entry key="previousDay">Zurück</entry>
+	<entry key="today">Heute</entry>
+	<entry key="nextDay">Vor</entry>
+    <entry key="go">Go</entry>
+	<entry key="date">Datum</entry>
+	<entry key="description">Beschreibung</entry>
+	<entry key="edit">Bearbeiten</entry>
+	<entry key="customer">Kunde</entry>
+    <entry key="sumDuration">Summe heute:</entry>
+    <entry key="weekSumDuration">Wochenstunden:</entry>
+    <entry key="generate">Generiere</entry>
+    <entry key="user">Benutzer</entry>
+    <entry key="issue">Issue</entry>
+
+    <entry key="timeSheetPage.title">Time Sheet</entry>
+    <entry key="customersPage.title">Kunde</entry>
+    <entry key="customersEditPage.title">Kunde bearbeiten</entry>
+
+    <entry key="projectsPage.title">Projekte</entry>
+    <entry key="projectsEditPage.title">Projekt bearbeiten</entry>
+    <entry key="editProjectPage.name">Name</entry>
+    <entry key="editProjectPage.customer">Kunde</entry>
+    <entry key="editProjectPage.description">Beschreibung</entry>
+    <entry key="editProjectPage.disabled">Deaktiviert</entry>
+    <entry key="editProjectPage.issueTrackerURL">Issue Tracker URL</entry>
+
+    <entry key="editCustomerPage.name">Name</entry>
+    <entry key="editCustomerPage.disabled">Deaktiviert</entry>
+
+
+    <entry key="usersPage.title">Benutzer</entry>
+    <entry key="editUserPage.title">Benutzer bearbeiten</entry>
+    <entry key="editUserPage.username">Benutzername</entry>
+    <entry key="editUserPage.password">Passwort</entry>
+    <entry key="editUserPage.passwordConfirm">Passwort bestätigen</entry>
+    <entry key="editUserPage.firstname">Vorname</entry>
+    <entry key="editUserPage.lastname">Nachname</entry>
+    <entry key="editUserPage.email">E-Mail</entry>
+    <entry key="editUserPage.role">Rolle</entry>
+    <entry key="editUserPage.disabled">Deaktiviert</entry>
+
+    <entry key="dateRangeValidator.begin_end_equal">Anfang und Ende dürfen nicht gleich sein!</entry>
+    <entry key="dateRangeValidator.time_entry_overlap">Zeiteintrag überschneidet sich mit einem bestehenden</entry>
+
+    <entry key="reportPage.title">Report</entry>
+    <entry key="reportPage.user">Benutzer</entry>
+
+    <entry key="changePasswordPage.title">Passwort ändern</entry>
+
+    <entry key="changePasswordPage.title">Passwort ändern</entry>
+    <entry key="changePasswordPage.change">Ändern</entry>
+    <entry key="changePasswordPage.oldPasswordWrong">Das eingegebenen Passwort entspricht nicht dem aktellen Passwort!</entry>
+    <entry key="changePasswordPage.success">Passwort geändert</entry>
+    <entry key="changePasswordPage.oldPassword">Altes Passwort</entry>
+    <entry key="changePasswordPage.newPassword">Neues Passwort</entry>
+    <entry key="changePasswordPage.confirmNewPassword">Neues Passwort bestätigen</entry>
+
+</properties>

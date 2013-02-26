@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+<wicket:extend>
+<div class="well well-large">
+	<form wicket:id="form">
+		<div class="overview">
+
+
+			<div class="control-group">
+				<label class="control-label" for="inputName"><wicket:message key="editCustomerPage.name"/></label>
+				<div class="controls">
+					<input id="inputName" wicket:id="name" type="text"/>
+				</div>
+			</div>
+
+
+			<div class="control-group">
+				<label class="checkbox">
+					<input id="inputDisabled" wicket:id="disabled" type="checkbox"/>
+					<wicket:message key="editCustomerPage.disabled"/>
+				</label>
+			</div>
+
+			<div class="control-group">
+				<div class="controls">
+					<input class="btn" type="button" wicket:id="cancel" value="Cancel"/>
+					<input class="btn btn-success" type="submit" wicket:id="save" value="Save"/>
+				</div>
+			</div>
+
+		</div>
+	</form>
+</div>
+</wicket:extend>
+</body>
+</html>

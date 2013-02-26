@@ -1,0 +1,74 @@
+apply plugin: 'war'
+apply plugin: 'jetty'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.6
+version = '1.1.0'
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Openbakery TimeTracker', 'Implementation-Version': version
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url "http://repository.jboss.org/nexus/content/groups/public-jboss"
+				url "http://repository.apache.org/snapshots"
+    }
+}
+
+ext.wicketVersion = '1.5.+'
+ext.springVersion = '3.+'
+ext.hibernateVersion = '3.5.+'
+ext.hsqldbVersion = '2.+'
+ext.logbackVersion = '0.9.+'
+ext.testngVersion = '6.0.+'
+ext.jodatimeVersion = '2.+'
+ext.guavaVersion = 'r09'
+ext.commonsCodecVersion = '1.5'
+ext.commonsLangVersion = '2.6'
+ext.mockitoVersion =  '1.8.+'
+ext.servletVersion = '2.+'
+ext.poiVersion = '3.+'
+
+dependencies {
+	compile group: 'org.springframework', name: 'spring-context', version: springVersion
+	compile group: 'org.springframework', name: 'spring-beans', version: springVersion
+	compile group: 'org.springframework', name: 'spring-web', version: springVersion
+	compile group: 'org.springframework', name: 'spring-test', version: springVersion
+	compile group: 'org.apache.wicket', name: 'wicket-core', version: wicketVersion
+	compile group: 'org.apache.wicket', name: 'wicket-spring', version: wicketVersion
+	compile group: 'org.apache.wicket', name: 'wicket-datetime', version: wicketVersion
+	compile group: 'org.hibernate', name: 'hibernate-annotations', version: hibernateVersion
+	compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: hibernateVersion
+	compile group: 'org.hibernate', name: 'hibernate-c3p0', version: hibernateVersion
+	compile group: 'org.hsqldb', name: 'hsqldb', version: hsqldbVersion
+	compile group: 'ch.qos.logback', name: 'logback-classic', version: logbackVersion
+	compile group: 'joda-time', name: 'joda-time', version: jodatimeVersion
+	compile group: 'com.google.guava', name: 'guava', version: guavaVersion
+	compile group: 'commons-codec', name: 'commons-codec', version: commonsCodecVersion
+	compile group: 'commons-lang', name: 'commons-lang', version: commonsLangVersion
+	testCompile group: 'org.testng', name: 'testng', version: testngVersion
+	testCompile group: 'org.mockito', name: 'mockito-core', version: mockitoVersion
+	compile group: 'javax.servlet', name: 'servlet-api', version: servletVersion
+	compile group: 'org.apache.poi', name: 'poi', version: poiVersion
+	compile group: 'org.apache.poi', name: 'poi-ooxml', version: poiVersion
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java'
+        }
+        resources {
+            srcDir 'src/main/resources'
+            srcDir 'src/main/java'
+        }
+    }
+}
+
+test {
+  useTestNG()
+}

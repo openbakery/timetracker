@@ -1,0 +1,24 @@
+<!DOCTYPE hibernate-configuration SYSTEM
+				"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.dialect">org.hibernate.dialect.HSQLDialect</property>
+		<property name="hibernate.connection.driver_class">org.hsqldb.jdbcDriver</property>
+		<property name="hibernate.connection.username">sa</property>
+		<property name="hibernate.connection.password"></property>
+		<property name="hibernate.connection.url">jdbc:hsqldb:file:database/timetracker;shutdown=true</property>
+		<property name="hibernate.cache.use_query_cache">true</property>
+		<property name="hibernate.cache.region_prefix">hibernate.test</property>
+		<property name="hibernate.jdbc.use_streams_for_binary">true</property>
+		<property name="hibernate.jdbc.batch_size">0</property>
+		<property name="hibernate.max_fetch_depth">3</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.generate_statistics">true</property>
+		<property name="hibernate.cache.provider_class">org.hibernate.cache.HashtableCacheProvider</property>
+		<!-- List of XML mapping files -->
+		<mapping class="org.openbakery.timetracker.data.User"/>
+		<mapping class="org.openbakery.timetracker.data.Customer"/>
+		<mapping class="org.openbakery.timetracker.data.Project"/>
+		<mapping class="org.openbakery.timetracker.data.TimeEntry"/>
+	</session-factory>
+</hibernate-configuration> 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="loginPage.title">Login</entry>
+    <entry key="loginPage.username">Username</entry>
+    <entry key="loginPage.password">Password</entry>
+    <entry key="loginPage.login">Login</entry>
+    <entry key="loginPage.loginFailed">Login Failed! Unknown username or wrong password!</entry>
+    <entry key="logoutPage.title">Logout</entry>
+</properties>

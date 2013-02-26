@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="menu.TimeSheet">Time Sheet</entry>
+	<entry key="menu.Customers">Customers</entry>
+	<entry key="menu.Projects">Projects</entry>
+	<entry key="menu.Users">Users</entry>
+    <entry key="menu.changePassword">Change Password</entry>
+    <entry key="menu.Report">Report</entry>
+    <entry key="menu.Logout">Logout (${user.name})</entry>
+
+	<entry key="save">Save</entry>
+	<entry key="delete">Delete</entry>
+	<entry key="update">Update</entry>
+	<entry key="begin">Start</entry>
+    <entry key="end">End</entry>
+    <entry key="duration">Duration</entry>
+	<entry key="project">Project</entry>
+	<entry key="previousDay">Previous</entry>
+	<entry key="today">Today</entry>
+    <entry key="nextDay">Next</entry>
+    <entry key="go">Go</entry>
+	<entry key="date">Date</entry>
+	<entry key="description">Description</entry>
+	<entry key="edit">Edit</entry>
+    <entry key="customer">Customer</entry>
+    <entry key="sumDuration">Sum:</entry>
+    <entry key="weekSumDuration">Week Sum:</entry>
+    <entry key="generate">Generate</entry>
+    <entry key="user">User</entry>
+    <entry key="issue">Issue</entry>
+
+
+
+	<entry key="loginPage.title">Login</entry>
+	<entry key="loginPage.username">Username</entry>
+	<entry key="loginPage.password">Password</entry>
+	<entry key="loginPage.login">Login</entry>
+    <entry key="loginPage.loginFailed">Login Failed! Unknown username or wrong password!</entry>
+    <entry key="logoutPage.title">Logout</entry>
+
+
+	<entry key="timeSheetPage.title">Time Sheet</entry>
+    <entry key="customersPage.title">Customer</entry>
+    <entry key="customersEditPage.title">Edit Customer</entry>
+
+	<entry key="projectsPage.title">Projects</entry>
+    <entry key="projectsEditPage.title">Edit Project</entry>
+    <entry key="editProjectPage.name">Name</entry>
+    <entry key="editProjectPage.customer">Customer</entry>
+    <entry key="editProjectPage.description">Description</entry>
+    <entry key="editProjectPage.disabled">disabled</entry>
+    <entry key="editProjectPage.issueTrackerURL">Issue Tracker URL</entry>
+
+    <entry key="editCustomerPage.name">Name</entry>
+    <entry key="editCustomerPage.disabled">disabled</entry>
+
+
+    <entry key="usersPage.title">User</entry>
+    <entry key="editUserPage.title">Edit User</entry>
+    <entry key="editUserPage.username">Username</entry>
+    <entry key="editUserPage.password">Password</entry>
+    <entry key="editUserPage.passwordConfirm">Confirm Password</entry>
+    <entry key="editUserPage.firstname">Firstname</entry>
+    <entry key="editUserPage.lastname">Lastname</entry>
+    <entry key="editUserPage.email">E-Mail</entry>
+    <entry key="editUserPage.role">Role</entry>
+    <entry key="editUserPage.disabled">Disabled</entry>
+
+	<entry key="dateRangeValidator.begin_end_equal">Begin and end time must not be equal</entry>
+	<entry key="dateRangeValidator.time_entry_overlap">Time Overlap</entry>
+
+    <entry key="reportPage.title">Report</entry>
+    <entry key="reportPage.user">User</entry>
+
+
+    <entry key="changePasswordPage.title">Change Password</entry>
+    <entry key="changePasswordPage.change">Change</entry>
+    <entry key="changePasswordPage.oldPasswordWrong">Current password does not match!</entry>
+    <entry key="changePasswordPage.success">Password changed</entry>
+    <entry key="changePasswordPage.oldPassword">Old password</entry>
+    <entry key="changePasswordPage.newPassword">New password</entry>
+    <entry key="changePasswordPage.confirmNewPassword">Confirm new password</entry>
+</properties>

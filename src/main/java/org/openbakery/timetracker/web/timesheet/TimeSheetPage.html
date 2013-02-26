@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+			xmlns:wicket="http://git-wip-us.apache.org/repos/asf/wicket/repo?p=wicket.git;a=blob_plain;f=wicket-core/src/main/resources/META-INF/wicket-1.5.xsd;hb=master"
+			xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+</head>
+<wicket:head>
+	<link type="text/css" href="styles/jquery-ui-1.10.1.custom.min.css" rel="stylesheet"/>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.10.1.custom.min.js"></script>
+
+	<script>
+		$(function() {
+		$( ".datePicker" ).datepicker({
+		dateFormat: 'dd.mm.yy',
+		onSelect: function(dateText, inst) {
+		$('#goToDate').trigger('click');
+		}
+		});
+		});
+	</script>
+
+</wicket:head>
+<body>
+<wicket:extend>
+
+
+	<form wicket:id="form" accept-charset="UTF-8" class="form-horizontal">
+		<div class="row">
+			<div class="span9">
+
+				<div class="well well-large">
+
+					<div class="form">
+
+						<div class="control-group" style="margin-bottom:0">
+							<div class="controls">
+								<div style="padding-left:40px;"><span wicket:id="dayname"></span></div>
+							</div>
+						</div>
+
+						<div class="control-group">
+							<form wicket:id="currentDate">
+								<label class="control-label" for="inputDate">
+									<wicket:message key="date"/>
+								</label>
+
+								<div class="controls">
+									<div class="input-prepend input-append">
+										<button wicket:id="previousDay" type="submit" class="btn"><i class="icon-arrow-left"/></button>
+										<input class="span2 datePicker input-medium" id="inputDate" wicket:id="date" type="text"/>
+										<button wicket:id="nextDay" type="submit" class="btn"><i class="icon-arrow-right"/></button>
+									</div>
+									<input class="btn" type="submit" wicket:id="today" value="Today"/>
+
+									<input type="submit" wicket:id="go" value="go" id="goToDate" style="display:none"/>
+								</div>
+							</form>
+
+						</div>
+
+
+						<div class="control-group">
+							<label class="control-label" for="inputBegin">
+								<wicket:message key="begin"/>
+							</label>
+
+							<div class="controls">
+								<input id="inputBegin" wicket:id="begin" type="text"/>
+							</div>
+						</div>
+
+
+						<div class="control-group">
+							<label class="control-label" for="inputEnd">
+								<wicket:message key="end"/>
+							</label>
+
+							<div class="controls">
+								<input id="inputEnd" wicket:id="end" type="text"/>
+							</div>
+						</div>
+
+						<div class="control-group">
+							<label class="control-label" for="inputCustomer">
+								<wicket:message key="customer"/>
+							</label>
+
+							<div class="controls">
+								<select id="inputCustomer" wicket:id="customer" size="1">
+									<option>-NONE-</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="control-group">
+							<label class="control-label" for="inputProject">
+								<wicket:message key="project"/>
+							</label>
+
+							<div class="controls">
+								<select id="inputProject" wicket:id="project" size="1">
+									<option>-NONE-</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="control-group">
+							<label class="control-label" for="inputDescription">
+								<wicket:message key="description"/>
+							</label>
+
+							<div class="controls">
+								<textarea id="inputDescription" wicket:id="description" type="text" rows="6" cols="40"/>
+							</div>
+						</div>
+
+						<div class="control-group">
+							<label class="control-label" for="inputIssue">
+								<wicket:message key="issue"/>
+							</label>
+
+							<div class="controls">
+								<input id="inputIssue" wicket:id="issue" type="text"/>
+							</div>
+						</div>
+
+						<div class="control-group">
+							<div class="controls">
+								<input class="btn" type="submit " wicket:id="cancel" value="Cancel"/>
+								<input class="btn btn-success" type="submit " wicket:id="save" value="Save"/>
+								<input class="btn btn-danger" type="submit" wicket:id="delete" value="Delete"/>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+					<div class="overview">
+						<div wicket:id="dayEntries">
+							<wicket:enclosure child="sumDuration">
+							<h4 class="info" wicket:id="day">day</h4>
+
+
+							<table class="table table-bordered">
+								<tbody>
+								<tr class="highlight">
+									<th>
+										<wicket:message key="begin"/>
+									</th>
+									<th>
+										<wicket:message key="end"/>
+									</th>
+									<th>
+										<wicket:message key="duration"/>
+									</th>
+									<th>
+										<wicket:message key="project"/>
+									</th>
+									<th>
+										<wicket:message key="description"/>
+									</th>
+									<th>
+										<wicket:message key="issue"/>
+									</th>
+									<th>&nbsp;</th>
+								</tr>
+								<tr wicket:id="timeEntries">
+									<td wicket:id="begin">Begin</td>
+									<td wicket:id="end">End</td>
+									<td wicket:id="duration">Duration</td>
+									<td wicket:id="project">Project</td>
+									<td wicket:id="description">description</td>
+									<td><a wicket:id="issue">asdf</a></td>
+									<td>
+										<a class="btn" href="#" wicket:id="edit">
+											<wicket:message key="edit"/>
+										</a>
+									</td>
+								</tr>
+								</tbody>
+								<tr class="highlight">
+									<td colspan="2"><strong><span class="pull-right"><wicket:message key="sumDuration"/></span></strong>
+									</td>
+									<td colspan="5"><strong><span wicket:id="sumDuration">Sum</span></strong></td>
+								</tr>
+							</table>
+							</wicket:enclosure>
+						</div>
+					</div>
+			</div>
+			<div class="span3">
+				<div class="well well-large">
+					<div>
+						<strong>
+							<wicket:message key="weekSumDuration"/>
+							<span wicket:id="weekSumDuration">Sum</span>
+						</strong>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+
+
+</wicket:extend>
+
+</body>
+</html>

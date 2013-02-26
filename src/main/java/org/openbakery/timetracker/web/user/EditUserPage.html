@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>Edit User Page</title>
+
+</head>
+
+<body>
+<wicket:extend>
+	<div class="well well-large">
+
+		<form wicket:id="form" class="form-horizontal">
+			<div class="overview">
+
+
+				<div class="control-group">
+					<label class="control-label" for="inputName"><wicket:message key="editUserPage.username"/></label>
+					<div class="controls">
+						<input id="inputName" wicket:id="name" type="text"/>
+					</div>
+				</div>
+
+				<wicket:enclosure child="password">
+					<div class="control-group">
+						<label class="control-label" for="inputPassword"><wicket:message key="editUserPage.password"/></label>
+						<div class="controls">
+							<input id="inputPassword" wicket:id="password" type="password"/>
+						</div>
+					</div>
+
+					<div class="control-group">
+						<label class="control-label" for="inputPasswordConfirm"><wicket:message key="editUserPage.passwordConfirm"/></label>
+						<div class="controls">
+							<input id="inputPasswordConfirm" wicket:id="passwordConfirm" type="password"/>
+						</div>
+					</div>
+				</wicket:enclosure>
+
+				<div class="control-group">
+					<label class="control-label" for="inputFirstName"><wicket:message key="editUserPage.firstname"/></label>
+					<div class="controls">
+						<input id="inputFirstName" wicket:id="firstname" type="text"/>
+					</div>
+				</div>
+
+				<div class="control-group">
+					<label class="control-label" for="inputLastName"><wicket:message key="editUserPage.lastname"/></label>
+					<div class="controls">
+						<input id="inputLastName" wicket:id="lastname" type="text"/>
+					</div>
+				</div>
+
+				<div class="control-group">
+					<label class="control-label" for="inputEMail"><wicket:message key="editUserPage.email"/></label>
+					<div class="controls">
+						<input id="inputEMail" wicket:id="email" type="text"/>
+					</div>
+				</div>
+
+				<div class="control-group">
+					<label class="control-label" for="inputRole"><wicket:message key="editUserPage.role"/></label>
+					<div class="controls">
+						<select id="inputRole" wicket:id="role" size="1">
+							<option>-NONE-</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="control-group">
+					<label class="checkbox">
+						<input id="inputDisabled" wicket:id="disabled" type="checkbox"/>
+						<wicket:message key="editUserPage.disabled"/>
+					</label>
+				</div>
+
+				<div class="control-group">
+					<div class="controls">
+						<input class="btn" type="button" wicket:id="cancel" value="Cancel"/>
+						<input class="btn btn-success" type="submit" wicket:id="save" value="Save"/>
+						<input class="btn btn-danger" type="submit" wicket:id="delete" value="Delete"/>
+					</div>
+				</div>
+
+			</div>
+		</form>
+	</div>
+</wicket:extend>
+</body>
+</html>

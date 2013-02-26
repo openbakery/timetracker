@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+	
+	<context:annotation-config/>
+	<context:component-scan base-package="org.openbakery.timetracker"/>
+	
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<value>classpath:timetracker.properties</value>
+		</property>
+	</bean>
+	
+
+	<bean id="persistance" class="org.openbakery.timetracker.persistence.DatabasePersistence">
+		<constructor-arg value="timetracker-hsqldb"/>
+		<qualifier type="Database"/>
+	</bean>
+	
+
+	<bean id="userService" class="org.openbakery.timetracker.service.DefaultUserService">
+	</bean>
+
+	<bean id="customerService" class="org.openbakery.timetracker.service.CustomerService">
+	</bean>
+
+	<bean id="projectService" class="org.openbakery.timetracker.service.ProjectService">
+	</bean>
+
+	<bean id="timeEntryService" class="org.openbakery.timetracker.service.TimeEntryService">
+	</bean>
+	
+</beans>

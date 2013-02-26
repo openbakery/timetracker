@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>ViewProjectsPage</title>
+
+</head>
+
+<body>
+<wicket:extend>
+	<div class="overview">
+
+		<form wicket:id="form">
+			<table class="table table-striped table-bordered">
+				<tbody>
+				<tr>
+					<th>Name</th>
+					<th>Customer</th>
+					<th>&nbsp;</th>
+				</tr>
+				<tr wicket:id="project">
+					<td wicket:id="name">name</td>
+					<td wicket:id="customer">customer</td>
+					<td>
+						<a class="btn" href="#" wicket:id="edit">Edit</a>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+
+
+			<div class="control-group">
+				<input class="btn" type="submit" wicket:id="add" value="add"/>
+			</div>
+
+		</form>
+	</div>
+</wicket:extend>
+
+</body>
+</html>

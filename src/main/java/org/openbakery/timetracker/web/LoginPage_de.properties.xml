@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="loginPage.title">Anmelden</entry>
+    <entry key="loginPage.username">Benutzername</entry>
+    <entry key="loginPage.password">Passwort</entry>
+    <entry key="loginPage.login">Anmelden</entry>
+    <entry key="loginPage.loginFailed">Anmeldung fehlgeschlagen! Unbekannter Benutzername oder falsches Passwort!</entry>
+    <entry key="logoutPage.title">Abmelden</entry>
+</properties>

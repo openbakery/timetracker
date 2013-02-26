@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+
+<body>
+<wicket:head>
+	<link type="text/css" href="styles/jquery-ui-1.10.1.custom.min.css" rel="stylesheet"/>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.10.1.custom.min.js"></script>
+
+	<script>
+		$(function() {
+		$( ".datePicker" ).datepicker({dateFormat: 'dd.mm.yy'});
+		});
+	</script>
+</wicket:head>
+<wicket:extend>
+	<div class="well well-large">
+
+		<form wicket:id="form" class="form-horizontal">
+			<div class="form">
+
+				<div class="control-group">
+					<label class="control-label" for="inputUser">
+						<wicket:message key="reportPage.user"/>
+					</label>
+
+					<div class="controls">
+						<select id="inputUser" wicket:id="user" size="1">
+							<option>-NONE-</option>
+						</select>
+					</div>
+				</div>
+
+
+				<div class="control-group">
+					<label class="control-label" for="inputBegin">
+						<wicket:message key="begin"/>
+					</label>
+
+					<div class="controls">
+						<input class="datePicker" id="inputBegin" wicket:id="begin" type="text"/>
+					</div>
+				</div>
+
+				<div class="control-group">
+					<label class="control-label" for="inputEnd">
+						<wicket:message key="end"/>
+					</label>
+
+					<div class="controls">
+						<input class="datePicker" id="inputEnd" wicket:id="end" type="text"/>
+					</div>
+				</div>
+
+				<div class="control-group">
+					<label class="control-label" for="inputCustomer">
+						<wicket:message key="customer"/>
+					</label>
+
+					<div class="controls">
+						<select id="inputCustomer" wicket:id="customer" size="1">
+							<option>-NONE-</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="control-group">
+					<div class="controls">
+						<input class="btn" type="submit" wicket:id="generateCSV" value="Generate CSV"/>
+						<input class="btn" type="submit" wicket:id="generateXLSX" value="Generate XLSX"/>
+					</div>
+				</div>
+
+			</div>
+		</form>
+	</div>
+</wicket:extend>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-configuration SYSTEM "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/timetracker?characterEncoding=UTF-8
+        </property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password"></property>
+        <property name="hibernate.connection.username"></property>
+        <property name="hibernate.jdbc.use_streams_for_binary">true</property>
+        <property name="hibernate.jdbc.batch_size">0</property>
+        <property name="hibernate.max_fetch_depth">3</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.generate_statistics">true</property>
+        <property name="hibernate.cache.provider_class">org.hibernate.cache.HashtableCacheProvider</property>
+        <property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+        <property name="hibernate.c3p0.acquire_increment">2</property>
+        <property name="hibernate.c3p0.idle_test_period">250</property>
+        <property name="hibernate.c3p0.timeout">500</property>
+        <property name="hibernate.c3p0.max_size">15</property>
+        <property name="hibernate.c3p0.min_size">3</property>
+        <property name="hibernate.c3p0.max_statements">10</property>
+        <property name="hibernate.show_sql">true</property>
+        <!-- List of XML mapping files -->
+        <mapping class="org.openbakery.timetracker.data.User"/>
+        <mapping class="org.openbakery.timetracker.data.Customer"/>
+        <mapping class="org.openbakery.timetracker.data.Project"/>
+        <mapping class="org.openbakery.timetracker.data.TimeEntry"/>
+
+    </session-factory>
+</hibernate-configuration>
