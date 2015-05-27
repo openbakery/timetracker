@@ -1,7 +1,7 @@
 TimeTracker
 ===========
 
-Time Tracker is a [Wicket](http://wicket.apapche.org/) based webapp to track your time.
+Time Tracker is a [Wicket](http://wicket.apache.org/) based webapp to track your time.
 
 Quick start
 ------------
