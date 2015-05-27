@@ -57,7 +57,7 @@ public abstract class TimeTrackerPage extends WebPage {
 		super.renderHead(response);
   }
 
-	private RepeatingView createMenu() {
+		private RepeatingView createMenu() {
 		RepeatingView menu = new RepeatingView("menu");
 
 		for (MenuItem item : getSession().getMenuItems()) {

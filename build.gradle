@@ -2,21 +2,31 @@ apply plugin: 'war'
 apply plugin: 'jetty'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
+apply plugin: 'maven'
 
 sourceCompatibility = 1.6
 version = '1.1.0'
+group = 'org.openbakery'
+
 jar {
     manifest {
         attributes 'Implementation-Title': 'Openbakery TimeTracker', 'Implementation-Version': version
     }
 }
 
+
+configurations {
+    deployerJars
+}
+
 repositories {
     mavenCentral()
+		/*
     maven {
         url "http://repository.jboss.org/nexus/content/groups/public-jboss"
 				url "http://repository.apache.org/snapshots"
     }
+		*/
 }
 
 ext.wicketVersion = '1.5.+'
@@ -55,6 +65,8 @@ dependencies {
 	compile group: 'javax.servlet', name: 'servlet-api', version: servletVersion
 	compile group: 'org.apache.poi', name: 'poi', version: poiVersion
 	compile group: 'org.apache.poi', name: 'poi-ooxml', version: poiVersion
+  deployerJars "org.apache.maven.wagon:wagon-ssh:2.2"
+	
 }
 
 sourceSets {
@@ -71,4 +83,33 @@ sourceSets {
 
 test {
   useTestNG()
+}
+
+uploadArchives {
+	repositories {
+		mavenDeployer {
+      configuration = configurations.deployerJars
+			
+			repository(url: publishURL) {
+				authentication(userName: publishUser, password: publishPassword)
+			}
+			
+			pom.project {
+				licenses {
+					license {
+						name 'The Apache Software License, Version 2.0'
+						url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+						distribution 'repo'
+					}
+				}
+				developers {
+			  	developer {
+						id "renep"
+			      name "René Pirringer"
+			      email "rene@openbakery.org"
+					}
+				}
+			}
+		}
+	}
 }
